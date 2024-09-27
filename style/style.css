@@ -1,66 +1,295 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar Styles */
+.navbar-custom {
+  background: transparent;
+}
+.navbar-nav {
+  margin-left: auto;
+  margin-right: 36%;
+}
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+  color: #b08d24; /* Warna teks putih */
+  position: relative; /* Dibutuhkan untuk animasi underline */
+}
+.navbar-custom .navbar-brand {
+  font-size: 1.75rem; /* Ukuran font lebih besar */
+  font-weight: bold; /* Membuat teks lebih tebal */
+}
+.navbar-custom .nav-link:hover {
+  color: #ddd22d; /* Warna teks berubah saat hover (biru Bootstrap) */
+  text-decoration: none; /* Garis bawah saat hover */
+  font-weight: bold;
+}
+.navbar-custom .nav-link.active {
+  color: #ddd22d; /* Warna teks untuk link aktif */
+  font-weight: bold; /* Teks tebal untuk link aktif */
+}
+
+/* Transisi halus untuk efek hover */
+.navbar-custom .nav-link {
+  transition: color 0.3s, text-decoration 0.3s;
+}
+
+.navbar-custom .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px; /* Ketebalan underline */
+  background-color: #b08d24; /* Warna underline */
+  transition: width 0.3s ease; /* Transisi untuk animasi */
+}
+.navbar-custom .nav-link:hover::after {
+  width: 100%; /* Lebar underline penuh saat hover */
+}
+/* Menyesuaikan ikon toggler agar terlihat jelas di latar belakang gelap */
+.navbar-custom .navbar-toggler-icon {
+  filter: invert(1);
+}
 /* Style for Hero Section */
-.hero-section {
-  background: url("https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
-    center center/cover no-repeat;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.container-hero{
+  padding: 10px;
+}
+.hero {
+  background-image: url("https://images.unsplash.com/photo-1605146769289-440113cc3d00?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  padding: 150px 0px;
+  color: white;
   text-align: center;
 }
 
-.hero-section h1 {
+.hero h1 {
   font-size: 3rem;
   font-weight: bold;
 }
 
-.hero-section p {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
+.hero p {
+  font-size: 1.25rem;
 }
 
-/* Additional Styles for Layanan Kami */
-#services .card {
-  border: none;
-  transition: transform 0.3s ease-in-out;
-}
-
-#services .card:hover {
-  transform: translateY(-10px);
-}
-
-#services .card-img-top {
-  border-top-left-radius: calc(0.25rem - 1px);
-  border-top-right-radius: calc(0.25rem - 1px);
-}
-
-#services .card-body {
-  padding: 1.5rem;
-}
-
-#services .card-title {
-  font-size: 1.5rem;
+.btn-custom-hero {
+  background-color: #d18f4d;
+  color: white;
+  border-radius: 30px;
+  padding: 12px 30px;
+  font-size: 1.2rem;
   font-weight: bold;
-  margin-bottom: 15px;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-#services .card-text {
+.btn-custom-hero:hover {
+  background: linear-gradient(45deg, #ff6b6b, #ffcc00);
+  transform: scale(1.05);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-custom-hero:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 4px rgba(255, 107, 107, 0.4);
+}
+
+/* About Us */
+.text-section h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.text-section p {
+  font-size: 18px;
+  color: #7d7d7d;
+  margin-bottom: 30px;
+}
+.btn-custom {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  font-size: 16px;
+}
+.image-section img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+.badge-custom {
+  background-color: #f0f0f0;
+  color: #000000;
+  border-radius: 25px;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .text-section h1 {
+    font-size: 36px;
+  }
+  .text-section p {
+    font-size: 16px;
+  }
+  .btn-custom {
+    font-size: 14px;
+  }
+}
+
+/* Product Section */
+.product-item {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.product-item:hover {
+  transform: scale(1.05);
+}
+
+/* Our Services */
+.process-badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 20px;
+}
+.main-heading {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.sub-heading {
+  font-size: 16px;
+  color: #999;
+  margin-bottom: 40px;
+}
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+.carousel-caption h5 {
+  font-size: 24px;
+  font-weight: 700;
+}
+.carousel-caption p {
+  font-size: 14px;
+}
+@media (max-width: 768px) {
+  .main-heading {
+    font-size: 32px;
+  }
+  .carousel-caption {
+    padding: 10px;
+  }
+  .carousel-caption h5 {
+    font-size: 18px;
+  }
+  .carousel-caption p {
+    font-size: 12px;
+  }
+}
+
+/* Why Us Section */
+.card-why-us {
+  border: none;
+  border-radius: 10px;
+  padding: 40px;
+  text-align: center;
+}
+.card-why-us i {
+  font-size: 1.5rem;
+  color: black;
+  margin-bottom: 10px;
+}
+.card-title-why-us {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.card-text-why-us {
+  font-size: 1rem;
+}
+.bg-light-orange {
+  background-color: #fff3e0;
+}
+.bg-light-blue {
+  background-color: #e0f7fa;
+}
+.bg-light-green {
+  background-color: #f1f8e9;
+}
+
+/* Portofolio and Gallery */
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.header p {
   font-size: 1rem;
   color: #6c757d;
 }
-
-/* General Section Styles */
-section {
-  padding: 60px 0;
+.btn-view-more {
+  background-color: #000;
+  color: #fff;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
-
-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
+.card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.2s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
-
-section p {
-  font-size: 1rem;
+.card img {
+  transition: transform 0.3s;
+  border-radius: 15px;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.card-title-gallery {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.card-icon {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  color: #fff;
+  font-size: 1.25rem;
 }
 
 /* Testimoni Style */
@@ -77,22 +306,9 @@ section p {
 }
 
 /* Contact Style */
-.contact-section {
-  padding: 60px 0;
-}
-.contact-section h2 {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 2.5rem;
-  color: #333;
-}
 .form-control {
   border-radius: 0;
   padding: 20px;
-}
-.btn-primary {
-  border-radius: 0;
-  padding: 10px 30px;
 }
 .contact-info {
   background-color: #343a40;
@@ -120,22 +336,23 @@ section p {
   border: 0;
 }
 
-/* Articel Section */
-.card {
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+/* Form Selling Property Section */
+.form-container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.btn-primary {
+  width: 50%;
+  height: 50px;
 }
-
-.card-body {
-  text-align: center;
+.btn-danger {
+  width: 50%;
+  height: 50px;
 }
 
 /* Platform Section */
-
 .platform-card {
   border: 1px solid #ddd;
   border-radius: 8px;

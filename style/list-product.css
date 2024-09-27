@@ -1,0 +1,12 @@
+.product-item {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.product-item:hover {
+  transform: scale(1.05);
+}
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 30px 0;
+}
