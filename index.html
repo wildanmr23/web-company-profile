@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Company Profile - Properti</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style/style.css" />
     <link
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       rel="stylesheet"
@@ -16,11 +18,15 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style/style.css" />
+    <!-- Tambahkan CSS AOS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-custom">
+    <nav class="navbar navbar-expand-lg navbar-custom" data-aos="fade-down">
       <div class="container-fluid pe-3">
         <a class="navbar-brand" href="#home" style="padding-left: 15px"
           >Property's Brand</a
@@ -76,7 +82,6 @@
             Creating spaces that harmonize modern aesthetics with timeless
             elegance...
           </p>
-          <a href="#" class="btn btn-custom-hero">Hubungi Sekarang</a>
         </div>
       </div>
     </div>
@@ -105,7 +110,7 @@
     </div>
 
     <!-- Best Seller Products -->
-    <div class="container-sm mt-5 mb-5" id="products">
+    <div class="container-sm mt-5 mb-5" id="products" data-aos="fade-right">
       <div class="process-badge mt-3">PRODUCTS</div>
       <h1 class="main-heading">Some Products with High Demand</h1>
       <p>
@@ -190,7 +195,7 @@
     </div>
 
     <!-- Our Services -->
-    <div class="container-sm mt-5 mb-5" id="services">
+    <div class="container-sm mt-5 mb-5" id="services" data-aos="fade-down">
       <div class="process-badge mt-3">OUR SERVICES</div>
       <h1 class="main-heading">
         Some of the services we offer and work with wholeheartedly well
@@ -263,7 +268,7 @@
     </div>
 
     <!-- Why Us? -->
-    <div class="container-sm text-center">
+    <div class="container-sm text-center" data-aos="fade-right">
       <div class="header">
         <h1>Why Choose Struktura Construction</h1>
         <p>
@@ -298,7 +303,7 @@
     </div>
 
     <!-- Portofolio or Gallery -->
-    <div class="container-sm mt-5 mb-5" id="portofolio">
+    <div class="container-sm mt-5 mb-5" id="portofolio" data-aos="slide-up">
       <div class="header mt-2">
         <h1>Explore Our Proudly Collection</h1>
         <p>
@@ -407,7 +412,7 @@
     </div>
 
     <!-- Testimonials Section -->
-    <div class="container-fluid bg-dark mt-5 mb-5 p-5" style="color: white">
+    <div class="container-fluid bg-dark mt-5 mb-5 p-5" style="color: white" data-aos="fade-down">
       <div class="header">
         <h1>What Our Customers Said</h1>
       </div>
@@ -710,7 +715,7 @@
     <footer>
       <div class="container text-center">
         <p>&copy; 2024 Made with Proud. All Rights Reserved.</p>
-        <p>Follow us on:</p>
+        <p>Follow us on :</p>
         <div>
           <a href="#" class="text-white mx-2"
             ><i class="fab fa-facebook-f"></i
@@ -730,5 +735,9 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init(); // Inisialisasi AOS
+    </script>
   </body>
 </html>

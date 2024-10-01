@@ -55,11 +55,11 @@ body {
   filter: invert(1);
 }
 /* Style for Hero Section */
-.container-hero{
+.container-hero {
   padding: 10px;
 }
 .hero {
-  background-image: url("https://images.unsplash.com/photo-1605146769289-440113cc3d00?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-image: url("https://plus.unsplash.com/premium_photo-1689609950112-d66095626efb?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-size: cover;
   background-position: center;
   border-radius: 20px;
@@ -75,29 +75,6 @@ body {
 
 .hero p {
   font-size: 1.25rem;
-}
-
-.btn-custom-hero {
-  background-color: #d18f4d;
-  color: white;
-  border-radius: 30px;
-  padding: 12px 30px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  border: none;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.btn-custom-hero:hover {
-  background: linear-gradient(45deg, #ff6b6b, #ffcc00);
-  transform: scale(1.05);
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-.btn-custom-hero:focus {
-  outline: none;
-  box-shadow: 0px 0px 0px 4px rgba(255, 107, 107, 0.4);
 }
 
 /* About Us */
@@ -383,7 +360,7 @@ body {
 .btn-primary {
   background-color: #007bff;
   border: none;
-  border-radius: 4px;
+  border-radius: 10px;
 }
 
 .btn-primary:hover {

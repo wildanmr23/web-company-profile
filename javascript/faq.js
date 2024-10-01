@@ -35,8 +35,8 @@ const faq = [
 // Function to create FAQ item HTML
 function createFaqItem(faq, index) {
   return `
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="faq${index + 1}">
+        <div class="accordion-item" >
+          <h2 class="accordion-header" id="faq${index + 1}" >
             <button
               class="accordion-button ${index === 0 ? "" : "collapsed"}"
               type="button"
